@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://elstarko:Mcqueenparker@cluster0.af7mewd.mongodb.net/?appName=Cluster0")
+mongoose.connect(process.env.MONGODB_URI || )
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
@@ -120,4 +120,5 @@ app.delete('/api/expenses/:id', async (req, res) => {
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+
 });
